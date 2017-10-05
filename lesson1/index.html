@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title>New</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="newjavascript.js"></script>
+        <script>
+            window.onload = function() {
+                var menuItem1 = new MenuItem('/', 'Home');
+                var menuItem2 = new MenuItem('/', 'Catalog');
+                var menuItem3 = new MenuItem('/', 'Blog');
+
+                var menu = new Menu("menu", "menu", [menuItem1, menuItem2, menuItem3]);
+                
+                
+                
+                var blockItem1 = new Item('/', 'Product1');
+                var blockItem2 = new Item('/', 'Product2');
+                var blockItem3 = new Item('/', 'Product3');
+                var blockItem4 = new Item('/', 'Product4');
+                var blockItem5 = new Item('/', 'Product5');
+                
+                var block1 = new MenuBlockItem ("block1", "block", [blockItem1, blockItem2], '/', 'Women');
+                var block2 = new MenuBlockItem ("block2", "block", [blockItem3, blockItem4], '/', 'Men');
+                var block3 = new MenuBlockItem ("block3", "block", [blockItem5], '/', 'Children');
+
+                var menuBlock = new MenuBlock("menuBlock", "menuBlock", [block1, block2, block3]);
+                
+                document.write(menu.render());
+                document.write(menuBlock.render());
+                
+                block3.remove();
+                
+            };
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
+
+
+
