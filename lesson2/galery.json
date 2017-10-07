@@ -1,15 +1,18 @@
 [
-   {
+    {
         "img_big":"img/img_big1.jpg",
-        "img_icon":"img/img_icon1.jpg"
+        "img_icon":"img/img_icon1.jpg",
+        "alt":"Kartinka1"
    },
    {
         "img_big":"img/img_big2.jpg",
-        "img_icon":"img/img_icon2.jpg"
+        "img_icon":"img/img_icon2.jpg",
+        "alt":"Kartinka2"
    },
    {
         "img_big":"img/img_big3.jpg",
-        "img_icon":"img/img_icon3.jpg"
+        "img_icon":"img/img_icon3.jpg",
+        "alt":"Kartinka3"
    }
 ]
 
