@@ -1,9 +1,0 @@
-
-#name, #tel, #email, #button {
-    margin: 10px;
-    display: block;
-}
-
-#name:invalid, #tel:invalid, #email:invalid {
-    border: 1px solid red;
-}

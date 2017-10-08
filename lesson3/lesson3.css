@@ -1,0 +1,18 @@
+.invalidmessage{
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+.invalid .invalidmessage{
+    display: inline;
+}
+
+.invalid .validatable{
+    outline: 2px solid lightcoral;
+}
+
+div{
+    margin: 5px;
+} 
+    

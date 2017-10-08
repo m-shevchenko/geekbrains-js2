@@ -4,30 +4,35 @@
         <title>New</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="newcss.css" rel="stylesheet">
-        <script src="newjavascript.js"></script>
+        <link href="lesson3.css" rel="stylesheet">
+        <script src="lesson3.js"></script>
     </head>
     
     <body>
-        <form id="forma">
-            <label>
-                Ваше имя
-                <input id="name" type="text" placeholder="Ваше имя и фамилия" form="forma"
-               title="Введите Ваше имя и фамилию" pattern="[A-Za-z]+( [A-Za-z]+)+">
-            </label>
-            <label>
-                Ваш телефон 
-                <input id="tel" type="tel" placeholder="+7(___)___-____" form="forma" 
-               title="Введите Ваш телефон" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{4}">
-            </label>
-            <label>
-                Ваш email 
-                <input id="email" type="email" placeholder="Ваш email" form="forma" 
-               title="Введите Ваш email" pattern="[.А-Яа-яA-Za-z0-9_-]+@[.А-Яа-яA-Za-z0-9_-]+\.[.а-яА-Яa-zA-Z]{2,6}">
-            </label>
-            <textarea id="text" placeholder="Ваше сообщение" cols="30" rows="10" form="forma"
-               title="Введите текст сообщения"></textarea>
-            <input id="button" type="submit" value="отправить" form="forma">
+        <form>
+            <div id="divname">
+                <label>
+                    Ваше имя
+                    <input id="name" class="validatable" type="text" placeholder="Ваше имя и фамилия" title="Введите Ваше имя и фамилию">
+                </label>
+                <span class="invalidmessage">Введите Ваше имя и фамилию латинскими буквами</span>
+            </div>
+            <div id="divtel">
+                <label>
+                    Ваш телефон 
+                    <input id ="tel" class="validatable"  type="tel" placeholder="+7(___)___-____" title="Введите Ваш телефон">
+                </label>
+                <span class="invalidmessage">Введите Ваш телефон +7(___)___-____</span>
+            </div>
+            <div id="divemail">
+                 <label>
+                    Ваш email 
+                    <input id="email" class="validatable"  type="email" placeholder="Ваш email" title="Введите Ваш email">
+                </label>
+                <span class="invalidmessage">Введите Ваш email в требуемом формате</span>
+            </div>
+            <div><textarea placeholder="Ваше сообщение" cols="30" rows="10" title="Введите текст сообщения"></textarea></div>
+            <input id="button" type = "button" value="отправить" onclick = "ValidForm()">
         </form>
     </body>
     
