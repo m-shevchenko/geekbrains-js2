@@ -4,9 +4,8 @@ window.onload = function () {
     big = document.getElementById("big");
     var xhr;
     if (window.XMLHttpRequest) {
-        // если используется Gecko (Chrome, Mozilla, Opera, Safari)
         xhr = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {// Internet Explorer
+    } else if (window.ActiveXObject) {
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xhr.overrideMimeType('application/json');

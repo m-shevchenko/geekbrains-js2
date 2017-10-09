@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 600px;
+    margin: 10px auto;
+}
+
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 30px;
+    border-bottom: 1px solid darkblue;
+    width: 100%;
+}
+
+ul.tabs li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    background: buttonface;
+    overflow: hidden;
+    position: relative;
+}
+
+ul.tabs li a {
+    text-decoration: none;
+    color: darkblue;
+    display: block;
+    font-size: 12px;
+    padding: 0 20px;
+    border: 1px solid darkblue;
+}
+
+ul.tabs li a:hover {
+    background: peachpuff;
+}
+
+html ul.tabs li.active, html ul.tabs li.active a:hover {
+    background: lightgreen;
+}
+.tab_container {
+    border: 1px solid darkblue;
+    border-top: none;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: buttonface;
+}
+
+.tab_content {
+    padding: 20px;
+    font-size: 10px;
+    color: darkblue;
+}
+
+.tab_content h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid darkblue;
+    font-size: 14px;
+}
+
+.tab_content h3 a{
+    color: darkblue;
+}
+
+.clear {
+    clear: both;
+}
+.city {
+    margin-top: 50px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="tabs.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="city.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/sunny/jquery-ui.css">
+
+    <script>
+       $(function() {
+        $("#citylist").autocomplete({
+            source: city
+          });
+  } );
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".tab_content").hide(); 
+            $("ul.tabs li:first").addClass("active").show(); 
+            $(".tab_content:first").show(); 
+            
+            $("ul.tabs li").click(function() {
+                $("ul.tabs li").removeClass("active"); 
+		$(this).addClass("active"); 
+		$(".tab_content").hide(); 
+		var activeTab = $(this).find("a").attr("href"); 
+		$(activeTab).fadeIn();
+		return false;
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    
+    <ul class="tabs">
+        <li><a href="#tab1">Tab 1</a></li>
+        <li><a href="#tab2">Tab 2</a></li>
+        <li><a href="#tab3">Tab 3</a></li>
+    </ul>
+    
+    <div class="tab_container">
+        
+        <div id="tab1" class="tab_content">
+            <h2>Tab 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Delectus, deleniti, rem eveniet aspernatur nam magni sapiente
+                    aliquid cupiditate illum sunt vel consectetur cumque incidunt
+                    odio temporibus quaerat tempore laborum voluptas!
+            </p>
+        </div>
+        
+        <div id="tab2" class="tab_content">
+            <h2>Tab 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Delectus, deleniti, rem eveniet aspernatur nam magni sapiente
+                    aliquid cupiditate illum sunt vel consectetur cumque incidunt
+                    odio temporibus quaerat tempore laborum voluptas!
+            </p>
+        </div>
+        
+        <div id="tab3" class="tab_content">
+            <h2>Tab 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Delectus, deleniti, rem eveniet aspernatur nam magni sapiente
+                    aliquid cupiditate illum sunt vel consectetur cumque incidunt
+                    odio temporibus quaerat tempore laborum voluptas!
+            </p>
+        </div>
+        
+    </div>
+    <div class="clear"></div>
+    
+    <div class = "city ui-widget"> 
+        <label>
+        Выберите ваш город
+        <input id = "citylist">
+        </label>
+    </div>
+    
+</div>
+</body>
+</html>
